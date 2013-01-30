@@ -4,6 +4,7 @@
 void testApp::setup(){
   //adding a comment
     //adding a 2nd comment
+    //adding a 3rd comment
 }
 
 //--------------------------------------------------------------
