@@ -1,0 +1,11 @@
+.DS_Store
+
+build/
+obj/
+*.o
+Debug*/
+Release*/
+*.mode*
+*.app/
+*.pyc
+.svn/
