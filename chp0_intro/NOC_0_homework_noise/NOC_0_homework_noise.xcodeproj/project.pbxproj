@@ -574,7 +574,7 @@
 				<key>isa</key>
 				<string>PBXNativeTarget</string>
 				<key>name</key>
-				<string>NOC_0_homework_week1</string>
+				<string>NOC_0_homework_noise</string>
 				<key>productName</key>
 				<string>myOFApp</string>
 				<key>productReference</key>
@@ -591,7 +591,7 @@
 				<key>isa</key>
 				<string>PBXFileReference</string>
 				<key>path</key>
-				<string>NOC_0_homework_week1Debug.app</string>
+				<string>NOC_0_homework_noiseDebug.app</string>
 				<key>sourceTree</key>
 				<string>BUILT_PRODUCTS_DIR</string>
 			</dict>

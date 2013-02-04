@@ -1,7 +1,4 @@
-
-
-#ifndef _SIMPLE_GAUSSIAN
-#define _SIMPLE_GAUSSIAN
+#pragma once
 
 
 #include "ofMain.h"
@@ -11,12 +8,13 @@ class testApp : public ofBaseApp{
 public:
     
     void setup();
+    void update();
     void draw();
 
-    
+    double drand();
+    double random_normal();
 };
 
 
-#endif
 
 
