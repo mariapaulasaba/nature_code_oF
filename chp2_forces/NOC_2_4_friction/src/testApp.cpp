@@ -2,14 +2,16 @@
 // Daniel Shiffman
 //
 // C++ / openFrameworks
-// chapter 2 exercise 2
+// chapter 2 exercise 4
 // version by Maria Paula Saba
-// based on Emmanuel Geoffray
+//  Example: friction
+
+
 
 #include "testApp.h"
 #include "mover.h"
 
-// Example 2: wind + gravity
+
 
 vector<mover> movers;
 
@@ -22,9 +24,10 @@ void testApp::setup(){
     
     
     for (unsigned int i = 0; i < movers.size(); i++){
+    
         movers[i].setup();
-        movers[i].setMass(ofRandom(0.1, 4));
-        movers[i].setLocation(0, 0);
+        movers[i].setMass(ofRandom(1, 4));
+        movers[i].setLocation(i*150, 0);
     }
     
     ofSetVerticalSync(true);
@@ -33,10 +36,25 @@ void testApp::setup(){
 
 //--------------------------------------------------------------
 void testApp::update(){
-    ofVec2f wind(ofRandom(0, 0.1), 0);
-    ofVec2f gravity(0, 0.1);
+    ofVec2f wind(0.05, 0);
+    
+    
     for (unsigned int i = 0; i < movers.size(); i++){
-        movers[i].applyForce(wind);
+        ofVec2f gravity(0, 0.1*movers[i].mass);
+        
+        float c = 0.01;
+        float normal = 1;
+        c  *= normal;
+        
+        ofVec2f friction;
+        friction.set(movers[i].velocity);
+        friction *= -1;
+        friction.normalize();
+        friction *= c;
+        
+        
+        movers[i].applyForce(friction);
+        //movers[i].applyForce(wind);
         movers[i].applyForce(gravity);
         movers[i].update();
         movers[i].checkEdges();
@@ -89,6 +107,6 @@ void testApp::gotMessage(ofMessage msg){
 }
 
 //--------------------------------------------------------------
-void testApp::dragEvent(ofDragInfo dragInfo){ 
+void testApp::dragEvent(ofDragInfo dragInfo){
     
 }
