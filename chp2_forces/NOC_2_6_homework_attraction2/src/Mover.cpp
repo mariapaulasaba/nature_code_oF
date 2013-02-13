@@ -9,12 +9,14 @@
 #include "Mover.h"
 
 
-void Mover::setup(){
+void Mover::setup(int i){
     location.set(0, 0);
     velocity.set(0, 0);
     acceleration.set(0, 0);
-    
+    id = i;
     mass = 1;
+    G = 0.4;
+
 }
 
 void Mover::applyForce(const ofVec2f & force){
@@ -22,13 +24,11 @@ void Mover::applyForce(const ofVec2f & force){
     acceleration += f;
 }
 
-void Mover::update(){
+void Mover::update(vector<Mover> m){
+
     velocity += acceleration;
     location += velocity;
     acceleration *= 0;
-
-   
-
     
     
 }
@@ -79,7 +79,7 @@ void Mover::checkEdges(){
 void Mover::resist(){
     
     float speed = velocity.length();
-    float dragMagnitude = 0.01 * speed * speed;
+    float dragMagnitude = 0.008 * speed * speed;
     
     ofVec2f resistance;
     resistance.set(velocity);
@@ -92,14 +92,20 @@ void Mover::resist(){
 }
 
 
-void Mover::repel(vector <Mover> m){
-    for (unsigned int i = 0; i < m.size(); i++){
+ofVec2f Mover::repel(Mover m){
+  //  for (unsigned int i = 0; i < m.size(); i++){
   
      ofVec2f repelForce;
-     repelForce = m[i].location - location;
+     repelForce = m.location - location;
      
+        float distance = repelForce.length();
+        distance = ofClamp(distance, 1, 1000);
+        repelForce.normalize();
         
-     applyForce(repelForce);
-    }
+        float strength = (G * mass * m.mass)/ (distance*distance);
+        repelForce *= -1*strength;
+        return repelForce;
+        
+   //  }
     
 }

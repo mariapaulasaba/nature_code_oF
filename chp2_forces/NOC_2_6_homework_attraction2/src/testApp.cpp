@@ -10,13 +10,13 @@ void testApp::setup(){
     ofEnableSmoothing();
     ofEnableAlphaBlending();
     ofBackground(0);
-    movers.resize(2500);
+    movers.resize(500);
     attractors.resize(1);
     
     
     for (unsigned int i = 0; i < movers.size(); i++){
         
-        movers[i].setup();
+        movers[i].setup(i);
         movers[i].setMass(ofRandom(0.1, 0.5));
         movers[i].setLocation(ofRandom(ofGetWidth()), ofRandom(ofGetHeight()));
     }
@@ -35,7 +35,14 @@ void testApp::setup(){
 //--------------------------------------------------------------
 void testApp::update(){
     for (unsigned int i = 0; i < movers.size(); i++){
-        
+      for (unsigned int j = 0; j < movers.size(); j++){
+          if(i!=j){
+           ofVec2f force =  movers[j].repel(movers[i]);
+          //    movers[i].applyForce(force);
+          
+          }
+      }
+       
         //ofVec2f gravity(0, 0.1*movers[i].mass);
         //movers[i].applyForce(gravity);
     
@@ -43,7 +50,7 @@ void testApp::update(){
         ofVec2f force(attractors[0].attract(movers[i]));
         movers[i].applyForce(force);
         
-        movers[i].update();
+        movers[i].update(movers);
         movers[i].checkEdges();
         movers[i].resist();
         
@@ -93,14 +100,13 @@ void testApp::keyReleased(int key){
 
 //--------------------------------------------------------------
 void testApp::mouseMoved(int x, int y ){
-    for (unsigned int i = 0; i < movers.size(); i++){
         
                
-     //   movers[i].repel(movers);
+     
 
         
         
-    }
+    
 
 }
 

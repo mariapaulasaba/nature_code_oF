@@ -9,10 +9,12 @@ public:
     float mass;
     ofVec2f location;
     ofVec2f velocity;
+    int id;
   
-    void setup();
+    void setup(int i);
+    
     void applyForce(const ofVec2f & force);
-    void update();
+    void update(vector<Mover> m);
     void draw();
     
     void setMass(float m);
@@ -20,8 +22,10 @@ public:
     void checkEdges();
     
     void resist();
-    void repel(vector<Mover> m);
+    ofVec2f repel(Mover m);
     
 private:
     ofVec2f acceleration;
+    float G;
+
 };
