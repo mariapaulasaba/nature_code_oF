@@ -12,6 +12,7 @@ public:
     }
     
     void setTarget(const ofVec2f & target){
+              
         acceleration = target - location;
         acceleration.normalize();
         acceleration *= 1.5;

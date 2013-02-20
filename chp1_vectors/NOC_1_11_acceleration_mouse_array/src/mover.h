@@ -2,50 +2,18 @@
 
 #include "ofMain.h"
 
-class mover {
+class Mover {
     
 public:
-    void setup(){
-        location.set(ofRandomWidth(), ofRandomHeight());
-        velocity.set(0, 0);
-        topSpeed = 6;
-        size = ofRandom(16);
-        cor = ofRandom(255);
-    }
+    void setup();
     
-    void setTarget(const ofVec2f & target, float diff){
-        acceleration = target - location;
-        acceleration.normalize();
-        acceleration *= diff;
-    }
+    void setTarget(const ofVec2f & target, float diff);
     
-    void update(){
-        // acceleration towards the mouse is set in testApp::draw
-        velocity += acceleration;
-        velocity.limit(topSpeed);
-        location += velocity;
-    }
+    void update();
     
-    void draw(){
-        ofSetColor(cor, 125);
-        ofEllipse(location, size, size);
-    }
+    void draw();
     
-    void checkEdges(){
-        
-        if (location.x > ofGetWidth()){
-            location.x = 0;
-        } else if (location.x < 0){
-            location.x = ofGetWidth();
-        }
-        
-        if (location.y > ofGetHeight()){
-            location.y = 0;
-        } else if (location.y < 0){
-            location.y = ofGetHeight();
-        }
-        
-    }
+    void checkEdges();
     
 private:
     ofVec2f location;

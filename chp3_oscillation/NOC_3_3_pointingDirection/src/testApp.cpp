@@ -20,7 +20,7 @@ void testApp::setup(){
     ofEnableAlphaBlending();
     ofBackground(255);
     
-    movers.resize(3);
+    movers.resize(1000);
     
     for(unsigned int i = 0; i < movers.size(); i++){
         movers[i].setup();

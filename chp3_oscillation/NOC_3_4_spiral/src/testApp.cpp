@@ -6,40 +6,35 @@ void testApp::setup(){
     ofSetBackgroundAuto(false);
     ofEnableSmoothing();
     
+    circles.resize(1);
+    
+    for(int i = 0; i < circles.size(); i++){
+        circles[i].setup();
+        
+    }
+    
 
 }
 
 //--------------------------------------------------------------
 void testApp::update(){
-     x = r * cos(theta);
-     y = r * sin(theta);
+    for(int i = 0; i < circles.size(); i++){
+        circles[i].update();
     
-    theta += 0.01;
-    r += 0.09;
+    }
     
-    angle += 0.1;
-
 }
 
 //--------------------------------------------------------------
 void testApp::draw(){
     
-   ofSetCircleResolution(50);
-    ofSetColor(0);
-    ofFill();
-
-    ofTranslate(ofGetWidth()/2, ofGetHeight()/2);
-
-    
-    ofRotate(angle);
-     ofCircle(x, y, 16, 16);
+    for(int i = 0; i < circles.size(); i++){
+        circles[i].draw();
+        
+    }
    
     
   
-
-
-    
-
 }
 
 //--------------------------------------------------------------

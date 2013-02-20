@@ -1,6 +1,7 @@
 #pragma once
 
 #include "ofMain.h"
+#include "Circle.h"
 
 class testApp : public ofBaseApp{
 
@@ -19,11 +20,11 @@ class testApp : public ofBaseApp{
 		void dragEvent(ofDragInfo dragInfo);
 		void gotMessage(ofMessage msg);
 		
-        float r = 0;
-        float theta = 0;
-        float x;   
-        float y; 
-    float angle = 0;
+        
+    
+    
+    vector<Circle> circles;
+    
     
 
 

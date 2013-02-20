@@ -12,7 +12,7 @@ void Mover::setup(){
     location.set(ofRandomWidth(), ofRandomHeight());
     velocity.set(0, 0);
     topSpeed = 6;
-    size = (int) ofRandom(10,16);
+    size = (int) ofRandom(6,12);
     cor = ofRandom(255);
 }
 
@@ -33,7 +33,7 @@ void Mover::update(){
 void Mover::draw(){
     ofSetColor(cor, 125);
     
-    float angle = atan2(velocity.y,velocity.x)*57.2957795;
+    float angle = ofRadToDeg(atan2(velocity.y,velocity.x)) + 90;
     
     ofPushMatrix();
     
