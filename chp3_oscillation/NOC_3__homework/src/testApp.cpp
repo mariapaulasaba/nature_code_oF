@@ -6,9 +6,9 @@ void testApp::setup(){
     
     ofEnableAlphaBlending();
     ofSetCircleResolution(100);
-   // ofSetVerticalSync(true);
+    ofSetVerticalSync(true);
     
-    movers.resize(1000);
+    movers.resize(500);
 
     for(unsigned int i = 0; i < movers.size(); i++){
         movers[i].setup();

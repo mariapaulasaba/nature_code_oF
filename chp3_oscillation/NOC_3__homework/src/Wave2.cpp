@@ -49,7 +49,7 @@ void Wave::display(){
         if(x == startX+width) ofSetColor(255,0,0);
         else ofSetColor(0, 50);
         ofFill();
-        ofCircle(x, y, size);
+        ofCircle(x-width, y, size);
         
         angle += angleVel;
     }

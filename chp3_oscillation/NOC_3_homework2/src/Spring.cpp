@@ -52,10 +52,10 @@ void Spring::display(Bob b){
     ofSetLineWidth(5);
     ofNoFill();
     
-    ofCurve(anchor.x+s, anchor.y+s, anchor.x, anchor.y, b.location.x, b.location.y, b.location.x-s, b.location.y-s);
+   // ofCurve(anchor.x+s, anchor.y+s, anchor.x, anchor.y, b.location.x, b.location.y, b.location.x-s, b.location.y-s);
        
    
- //   ofLine(b.location.x, b.location.y, anchor.x, anchor.y);
+    ofLine(b.location.x, b.location.y, anchor.x, anchor.y);
     ofSetLineWidth(1);
 
    
