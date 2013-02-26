@@ -19,7 +19,9 @@ void Spring::setup(float x, float y, int l){
 
 
 
-ofVec2f Spring::connect(Bob b){
+void Spring::connect(Bob  & b){
+    
+    
     
     ofVec2f springForce;
     springForce = b.location - anchor;
@@ -31,7 +33,7 @@ ofVec2f Spring::connect(Bob b){
     springForce = springForce * -1 * k * stretch;
     
     
-    return springForce;
+    b.applyForce(springForce);
 }
 
 
@@ -39,7 +41,7 @@ ofVec2f Spring::connect(Bob b){
 
 
 
-void Spring::display(Bob b){
+void Spring::display(Bob & b){
 
     ofVec2f springForce;
     springForce = b.location - anchor;
@@ -62,7 +64,7 @@ void Spring::display(Bob b){
 }
 
 
-void Spring::constrainLength(Bob & b, float minLen, float maxLen){
+void Spring::constrainLength(Bob b, float minLen, float maxLen){
     ofVec2f dir;
     dir = b.location - anchor;
     

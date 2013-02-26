@@ -24,7 +24,7 @@ void testApp::update(){
         movers[i].checkEdges();
     }
     
-    
+    ofEnableBlendMode(<#ofBlendMode blendMode#>)
     }
 
 //--------------------------------------------------------------

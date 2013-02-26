@@ -23,16 +23,15 @@ void testApp::update(){
     ofVec2f gravity(0, 2);
     bob.applyForce(gravity);
     
-    ofVec2f springForce(spring.connect(bob));
-    bob.applyForce(springForce);
-    
+    spring.connect(bob);
+    spring.constrainLength(bob, 40, 200);
+   
     bob.airResistance();
     
     
     
     
     
-    //spring.constrainLength(bob, 40, 200);
     
     bob.update();
     bob.drag(mouseX, mouseY);
