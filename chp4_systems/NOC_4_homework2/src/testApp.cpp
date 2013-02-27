@@ -8,7 +8,7 @@ void testApp::setup(){
     ofBackground(0);
     
     ofSetBackgroundAuto(false);
-    img.loadImage("texture.png");
+    img.loadImage("texture2.png");
    
     ofVec2f origin(ofRandom(100, ofGetWidth()-100), ofRandom(50, ofGetHeight()-200));
  
@@ -31,7 +31,7 @@ void testApp::update(){
     
       
     ofEnableAlphaBlending();
-    ofSetColor(0,30);
+    ofSetColor(0,50);
     ofFill();
     ofRect(0, 0, ofGetWidth(), ofGetHeight());
     

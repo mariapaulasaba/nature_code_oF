@@ -14,6 +14,7 @@ void testApp::setup(){
     ParticleSystem *p = new ParticleSystem(origin);
     ps.push_back(p);
     
+    fire.setup(ofGetWidth(), ofGetHeight());
 }
 
 
@@ -63,12 +64,15 @@ void testApp::update(){
 //--------------------------------------------------------------
 void testApp::draw(){
    
-    for(int i = 0; i < ps.size(); i++){
+//    for(int i = 0; i < ps.size(); i++){
+//
+//    ps[i]->run();
+//	
+//    }
+    
+    fire.renderToFbo(1.005, ps);
+    fire.getFbo().draw(0,0);
 
-    ps[i]->run();
-	
-    }
- 
     
     
 }

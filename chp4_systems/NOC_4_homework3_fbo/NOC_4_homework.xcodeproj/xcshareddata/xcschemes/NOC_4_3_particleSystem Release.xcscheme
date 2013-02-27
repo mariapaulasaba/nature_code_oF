@@ -14,9 +14,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "E4B69B5A0A3A1756003C02F2"
-               BuildableName = "NOC_4_homework2.app"
-               BlueprintName = "NOC_4_homework2"
-               ReferencedContainer = "container:NOC_4_homework2.xcodeproj">
+               BuildableName = "NOC_4_homework.app"
+               BlueprintName = "NOC_4_homework"
+               ReferencedContainer = "container:NOC_4_homework.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -32,9 +32,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "E4B69B5A0A3A1756003C02F2"
-            BuildableName = "NOC_4_homework2.app"
-            BlueprintName = "NOC_4_homework2"
-            ReferencedContainer = "container:NOC_4_homework2.xcodeproj">
+            BuildableName = "NOC_4_homework.app"
+            BlueprintName = "NOC_4_homework"
+            ReferencedContainer = "container:NOC_4_homework.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -51,9 +51,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "E4B69B5A0A3A1756003C02F2"
-            BuildableName = "NOC_4_homework2.app"
-            BlueprintName = "NOC_4_homework2"
-            ReferencedContainer = "container:NOC_4_homework2.xcodeproj">
+            BuildableName = "NOC_4_homework.app"
+            BlueprintName = "NOC_4_homework"
+            ReferencedContainer = "container:NOC_4_homework.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -69,9 +69,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "E4B69B5A0A3A1756003C02F2"
-            BuildableName = "NOC_4_homework2.app"
-            BlueprintName = "NOC_4_homework2"
-            ReferencedContainer = "container:NOC_4_homework2.xcodeproj">
+            BuildableName = "NOC_4_homework.app"
+            BlueprintName = "NOC_4_homework"
+            ReferencedContainer = "container:NOC_4_homework.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

@@ -33,6 +33,7 @@
      
      
      
+  //   fire.setup(200, 200);
 
 }
 
@@ -42,9 +43,14 @@ void ParticleSystem::run(){
     for(int i = particles.size()-1; i >= 0; i--){
        
         
-    
+       // ofEnableBlendMode(OF_BLENDMODE_SCREEN);
+                
         particles[i]->run();
-         
+ 
+     //   fire.renderToFbo(1.005, particles[i]);
+     //   fire.getFbo().draw(particles[i]->location.x-100,particles[i]->location.y-100);
+        
+        
         if(particles[i]->isDead()){
             
             particles.erase(particles.begin() + i);
