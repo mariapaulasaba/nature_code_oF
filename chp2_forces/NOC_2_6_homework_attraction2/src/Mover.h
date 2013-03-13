@@ -14,7 +14,7 @@ public:
     void setup(int i);
     
     void applyForce(const ofVec2f & force);
-    void update(vector<Mover> m);
+    void update();
     void draw();
     
     void setMass(float m);

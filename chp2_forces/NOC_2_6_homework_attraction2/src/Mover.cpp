@@ -24,7 +24,7 @@ void Mover::applyForce(const ofVec2f & force){
     acceleration += f;
 }
 
-void Mover::update(vector<Mover> m){
+void Mover::update(){
 
     velocity += acceleration;
     location += velocity;

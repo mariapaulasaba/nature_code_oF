@@ -13,7 +13,7 @@
      
     origin = location;
      lifeTime = 0;
-     numParticles = ofRandom(50,120);
+     numParticles = ofRandom(50,300);
      
      int chooseColor = ofRandom(5);
      
