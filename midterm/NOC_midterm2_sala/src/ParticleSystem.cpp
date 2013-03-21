@@ -129,7 +129,7 @@ void ParticleSystem::explode(int mx, int my){
 void ParticleSystem::goBack(int mx, int my){
     
    // if(mx < centerX-width/2 || (mx > centerX+width/2 || my < centerY-height/2 || my > centerY+height/2)){
-    if(timer > 200){
+    if(timer > 100){
         for(unsigned int i = 0; i < movers.size(); i++){
             
             movers[i].isBack = true;
